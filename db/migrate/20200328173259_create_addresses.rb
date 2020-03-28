@@ -4,7 +4,7 @@ class CreateAddresses < ActiveRecord::Migration[6.0]
       t.string :street_number
       t.string :city
       t.string :province
-      t.int :user_id
+      t.integer :user_id
 
       t.timestamps
     end

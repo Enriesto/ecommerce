@@ -6,8 +6,8 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.float :GST
       t.float :PST
       t.float :HST
-      t.int :user_id
-      t.int :status_id
+      t.integer :user_id
+      t.integer :status_id
 
       t.timestamps
     end
