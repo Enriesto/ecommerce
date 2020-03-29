@@ -10,4 +10,5 @@ class Product < ApplicationRecord
 
   belongs_to :categories
   has_many :order_products
+  accepts_nested_attributes_for :categories, allow_destroy: true
 end
