@@ -4,5 +4,6 @@ class User < ApplicationRecord
   validates :email, confirmation: true
   validates :password, length: { minimum: 8 }
 
-  has_many :orders, :addresses
+  has_many :orders
+  has_many :addresses
 end
