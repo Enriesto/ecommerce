@@ -6,6 +6,8 @@ class Product < ApplicationRecord
   validates :quantity_in_stock, numericality: { only_integer: true }
   validates :description, length: { maximum: 500 }
 
+  has_one_attached :image
+
   belongs_to :categories
   has_many :order_products
 end
