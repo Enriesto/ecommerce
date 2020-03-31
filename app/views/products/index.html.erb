@@ -1,2 +1,10 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<% if @products.empty? %>
+  <p> No products to show at this time.</p>
+<% else %>
+  <% @products.each do |p| %>
+    <h2><%= p.name %></h2>
+    <p>Description: <%= p.description %> </p>
+    <p>Price: <%= p.price %> </p>
+    <p>In Stock: <%= p.quantity_in_stock %> </p>
+  <% end %>
+<% end %>
