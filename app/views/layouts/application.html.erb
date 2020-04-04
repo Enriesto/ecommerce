@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project</title>
+    <title>Olympic Attire</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,10 +10,15 @@
   </head>
 
   <body>
-    <%# This below is for when we need to show product images %>
-    <%# <% if product.image.present? %>
-      <%# <%= image_tag product.image %>
-    <%# <% end %>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <p><%= link_to 'Home', root_path %></p>
+      </header>
+      <%# This below is for when we need to show product images %>
+      <%# <% if product.image.present? %>
+        <%# <%= image_tag product.image %>
+      <%# <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
