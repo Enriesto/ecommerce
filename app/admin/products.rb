@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ActiveAdmin.register Product do
-  permit_params :product_number, :name, :description, :price, :quantity_in_stock, :category_id, :image, categories_attributes: %i[id name _destroy]
+  permit_params :product_number, :name, :description, :price, :quantity_in_stock, :category_id, :image # , categories_attributes: %i[id name _destroy]
 
   # index do
   #   selectable_column

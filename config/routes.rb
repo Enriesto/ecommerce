@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'categories/index'
+  get 'categories/show'
   root to: 'products#index'
 
   get 'products/:id', to: 'products#show', id: /\d+/
