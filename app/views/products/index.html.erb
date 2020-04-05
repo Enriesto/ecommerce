@@ -1,11 +1,5 @@
 <% if @products.empty? %>
   <p> No products to show at this time.</p>
 <% else %>
-  <% @products.each do |product| %>
-    <h2><%= link_to product.name, product %></h2>
-    <p>Description: <%= product.description %> </p>
-    <p>Price: <%= product.price %> </p>
-    <p>Category: <%= product.category.name %></p>
-    <p>In Stock: <%= product.quantity_in_stock %> </p>
-  <% end %>
+  <%= render @products %>
 <% end %>
