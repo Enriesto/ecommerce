@@ -2,11 +2,15 @@
 
 <details>
   <summary>Shopping Cart</summary>
-  <ul>
-    <% @cart.each do |product| %>
-      <li><%= product.name %></li>
-    <% end %>
-  </ul>
+  <% if @cart.empty? %>
+    <p>No items in cart yet.</p>
+  <% else %>
+    <ul>
+      <% @cart.each do |product| %>
+        <li><%= product.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </details>
 
 <% if @products.empty? %>
