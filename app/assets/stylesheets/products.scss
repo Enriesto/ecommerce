@@ -5,6 +5,10 @@
 .card {
   min-width: 22%;
   max-height: 450px;
+
+  .card-content {
+    margin: 0 auto;
+  }
 }
 
 .container {
