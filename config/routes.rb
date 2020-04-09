@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'products#index'
   get 'products', to: 'products#index'
   get 'products/:id', to: 'products#show', id: /\d+/, as: 'product' # product_path
+  get 'about', to: 'products#about'
 
   resources 'categories', only: %i[index show]
   # get 'categories', to: 'categories#index'
