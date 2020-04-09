@@ -1,5 +1,16 @@
-<h2><%= link_to product.name, product %></h2>
-<p>Description: <%= product.description %> </p>
-<p>Price: <%= product.price %> </p>
-<p>Category: <%= product.category.name %></p>
-<p>In Stock: <%= product.quantity_in_stock %> </p>
+<div class="column">
+<div class="card">
+  <div class="card-content">
+    <h2 class="title is-4"><%= link_to product.name, product %></h2>
+    <% if product.image.present? %>
+      <%= image_tag product.image, class: "product-image" %>
+    <% end %>
+  </div>
+  <footer class="card-footer">
+    <%# <p class="card-footer-item">Description: <%= product.description %>
+    <p class="card-footer-item">Price: <%= product.price %> </p>
+    <p class="card-footer-item">Category: <%= product.category.name %></p>
+    <p class="card-footer-item">In Stock: <%= product.quantity_in_stock %> </p>
+  </footer>
+</div>
+</div>

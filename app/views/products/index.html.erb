@@ -1,5 +1,8 @@
 <% if @products.empty? %>
   <p> No products to show at this time.</p>
 <% else %>
-  <%= render @products %>
+  <div class="columns is-multiline">
+    <%= render @products %>
+  </div>
 <% end %>
+<%= paginate @products %>

@@ -7,6 +7,7 @@ class Product < ApplicationRecord
   validates :description, length: { maximum: 500 }
 
   has_one_attached :image
+  paginates_per 5
 
   belongs_to :category
   has_many :order_products

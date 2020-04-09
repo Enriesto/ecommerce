@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.card {
+  min-width: 22%;
+  max-height: 450px;
+}
+
 .container {
   width: 800px;
   margin: 0 auto;
@@ -10,12 +15,6 @@
   padding: 2em;
 }
 
-header {
-  margin-bottom: 3em;
-}
-
-footer {
-  margin-top: 2em;
-  font-size: 0.8em;
-  color: #555;
+.product-image {
+  position: relative;
 }
