@@ -10,6 +10,7 @@
     <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <img class="slideshow" name="slide" width="250" height="100">
   </head>
 
   <body>
@@ -25,3 +26,34 @@
     <footer></footer>
   </body>
 </html>
+
+<script>
+  var i = 0; // Start point
+  var images = [];
+  var time = 3000;
+
+  // Image List
+  images[0] = '<%= image_path 'imageOne.jpg' %>';
+  images[1] = '<%= image_path 'imageTwo.jpg' %>';
+  images[2] = '<%= image_path 'imageThree.jpg' %>';
+  images[3] = '<%= image_path 'imageFour.jpg' %>';
+  images[4] = '<%= image_path 'imageFive.jpg' %>';
+
+  // Change Image
+  function changeImage(){
+    document.slide.src = images[i];
+
+    if(i < images.length - 1){
+      i++;
+    }
+    else {
+      i = 0;
+    }
+
+    setTimeout("changeImage()", time);
+  }
+
+  window.onload = changeImage;
+
+</script>
+
