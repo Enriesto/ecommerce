@@ -19,6 +19,16 @@
         <header>
           <h1 class="title is-2">Welcome to Olympic Attire</h1>
           <h1 class="title is-4"><%= link_to 'Home', root_path %></h1>
+          <form class="form-inline" action="/search">
+            <input class="form-control mr-sm-2" name="name" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <select class="form-control mr-sm-2" name="dropdown">--Category--
+            <option value="0">All</option>
+            <% Category.all.each do |category| %>
+              <option value="<%= category.name %>"><%= category.name %></option>
+            <% end %>
+            </select>
+          </form>
         </header>
         <%= yield %>
       </div>

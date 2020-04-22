@@ -1,0 +1,19 @@
+<%# <%= debug session[:cart] %>
+
+<details>
+  <summary>Shopping Cart</summary>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= product.name %></li>
+    <% end %>
+  </ul>
+</details>
+
+<% if @products.empty? %>
+  <p> No products to show at this time.</p>
+<% else %>
+  <div class="columns is-multiline">
+    <%= render @products %>
+  </div>
+<% end %>
+<%= paginate @products %>

@@ -12,6 +12,15 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def search
+    if params[:dropdown] == '0'
+      @products = Product.where('name LIKE ?', "%#{params[:name]}%").page params[:page]
+    else
+      @category = Category.find_by(name: params[:dropdown])
+      @products = @category.products.where('name LIKE ?', "%#{params[:name]}%").page params[:page]
+    end
+  end
+
   def about; end
 
   def add_to_cart
